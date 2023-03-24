@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Nutrition App</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="today">
+            <p id="date">Рацион на сегодня:</p>
+            <div class="products" id="today">
+
+
+            </div>
+        </div>
+        <div class="all">
+            <p>Доступный набор продуктов:</p>
+            <div class="products" id="products">
+            </div>
+        </div>
+
+        <button id="add_button">Добавить продукт</button>
+        <div class="product_card" id="add_card">
+            <label for="name">Название: <input type="text" id="name"></label>
+            <label for="p">Белки: <input type="text" id="p"></label>
+            <label for="f">Жиры: <input type="text" id="f"></label>
+            <label for="c">Углеводы: <input type="text" id="c"></label>
+            <label for="ccal">Калории:<input type="text" id="ccal"></label>
+            <button id="add_product_button">Добавить</button>
+            <button id="add_product_hide">Скрыть</button>
+        </div>
+    </div>
+    <div class="stats" id="stats">
+    </div>
+    <div class="stats" id="left">
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
