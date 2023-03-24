@@ -65,9 +65,18 @@ function saveAll(){
 
 function loadAll() {
 
-    products = JSON.parse(localStorage.getItem('products'))
-    today = JSON.parse(localStorage.getItem('today'))
-    console.log(today)
+    if (localStorage.getItem('products') != null) {
+        products = JSON.parse(localStorage.getItem('products'))
+    } else {
+        products = [
+            new Product("borsh",20,10,10, 200)
+        ]
+    }
+    if (localStorage.getItem('today') != null) {
+        today = JSON.parse(localStorage.getItem('today'))
+    } else {
+        today = []
+    }
 }
 
 function deleteProduct(id) {
@@ -159,9 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let c = document.getElementById('c')
     let ccal = document.getElementById('ccal')
 
-    if (localStorage.length > 0) {
-        loadAll()
-    }
+    loadAll()
 
 
     let add_card_show = document.getElementById('add_button')
